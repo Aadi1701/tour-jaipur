@@ -26,7 +26,6 @@ const Header=()=>{
     <div className= "app-header">
       <nav className= "nav-bar">
 
-        {NavbarData.map(createNavbarCard)}
       </nav>
     </div>
    );
