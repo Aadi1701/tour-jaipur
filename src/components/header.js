@@ -1,18 +1,34 @@
 import React from 'react';
+import NavbarData from '../NavbarData.js';
 
-function header(){
+function NavBarCard(props){
   return(
-    <div className= "app-header">
-      <nav className= "nav-bar">
-        <span>item1</span>
-        <span>item2</span>
-        <span>item3</span>
-        <span>item4</span>
-        <span>item5</span>
-        <span>item6</span>
-      </nav>
+    <div className="NavBarCard">
+     <img className="NavBarCard-image" src={props.image} alt="small-logo" />
+     <h4 className="NavBarCard-name">{props.name}</h4>
     </div>
   );
 }
 
-export default header;
+function createNavbarCard(dataNavbar){
+  return(
+    <NavBarCard
+     key={dataNavbar.id}
+     image={dataNavbar.image}
+     name={dataNavbar.name}
+    />
+  );
+}
+
+function Header(){
+  return(
+    <div className= "app-header">
+      <nav className= "nav-bar">
+
+        {NavbarData.map(createNavbarCard)}
+      </nav>
+    </div>
+   );
+  }
+
+export default Header;
