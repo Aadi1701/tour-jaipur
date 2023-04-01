@@ -1,12 +1,11 @@
-import Header from './components/Header.js';
-import HeaderC from './components/HeaderC.css';
-import Section1 from './components/Section1.js';
-import Section1C from './components/Section1C.css';
+import React from "react";
+import Section1 from './components/Section1'
+import Header from "./components/Header";
 
-function App() {
+const App = ()=> {
   return (
     <div>
-      <Header />
+      <Header/>
       <Section1 />
     </div>
   );

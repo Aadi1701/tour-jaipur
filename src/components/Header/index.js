@@ -1,7 +1,8 @@
 import React from 'react';
-import NavbarData from '../NavbarData.js';
+import NavbarData from '../../Utils/NavbarData.js';
+import './style.css'
 
-function NavBarCard(props){
+const NavBarCard=(props)=>{
   return(
     <div className="NavBarCard">
      <img className="NavBarCard-image" src={props.image} alt="small-logo" />
@@ -10,7 +11,7 @@ function NavBarCard(props){
   );
 }
 
-function createNavbarCard(dataNavbar){
+const createNavbarCard=(dataNavbar)=>{
   return(
     <NavBarCard
      key={dataNavbar.id}
@@ -20,7 +21,7 @@ function createNavbarCard(dataNavbar){
   );
 }
 
-function Header(){
+const Header=()=>{
   return(
     <div className= "app-header">
       <nav className= "nav-bar">

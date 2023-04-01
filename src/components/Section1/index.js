@@ -1,6 +1,7 @@
 import React from 'react';
+import './style.css'
 
-function Section1(){
+const Section1=()=>{
   return(
     <div>
        <div className="Section1-container">
