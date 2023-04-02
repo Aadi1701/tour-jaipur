@@ -1,31 +1,21 @@
 import React from 'react';
 import NavbarData from '../../Utils/NavbarData.js';
 import './style.css'
-
-const NavBarCard=(props)=>{
-  return(
-    <div className="NavBarCard">
-     <img className="NavBarCard-image" src={props.image} alt="small-logo" />
-     <h4 className="NavBarCard-name">{props.name}</h4>
-    </div>
-  );
-}
-
-const createNavbarCard=(dataNavbar)=>{
-  return(
-    <NavBarCard
-     key={dataNavbar.id}
-     image={dataNavbar.image}
-     name={dataNavbar.name}
-    />
-  );
-}
+import Logo from '../../assets/tour-logo-transparent.png'
+import {GiHamburgerMenu} from 'react-icons/gi'
 
 const Header=()=>{
   return(
     <div className= "app-header">
       <nav className= "nav-bar">
-
+         <img className='logo' src={Logo} alt='logo'/>
+          <GiHamburgerMenu className='ham'/>
+          <ul className='nav-bar-item-group'>
+            {
+              NavbarData.map((item,pos)=><li className={pos===0?'active':`nav-bar-item`} key={pos}>{item.name}</li>)
+            }
+            
+          </ul>
       </nav>
     </div>
    );

@@ -1,13 +1,12 @@
 import React from "react";
 import Section1 from './components/Section1'
-import Header from "./components/Header";
+import Layout from "./components/Layout";
 
 const App = ()=> {
   return (
-    <div>
-      <Header/>
-      <Section1 />
-    </div>
+    <Layout>
+      <Section1/>
+    </Layout>
   );
 }
 

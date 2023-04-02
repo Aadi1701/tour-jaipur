@@ -1,14 +1,16 @@
 import React from 'react';
 import './style.css'
+import LandingImage from '../../assets/rajasthan.jpg'
 
 const Section1=()=>{
   return(
-    <div>
+    <div className='wrapper'>
+      <img className='landing-carousel' src={LandingImage} alt='landing'/>
        <div className="Section1-container">
         <div className="Section1-items">
-         <h1 className="Section1-heading">Your journey begins</h1>
-         <p>A journey of 1000 miles starts with a single step.</p>
-         <p>So make your first step</p>
+         <h1 className="Section1-heading">Your Journey Begins</h1>
+         <p className='tag-line'>A journey of 1000 miles starts with a single step.</p>
+         <p className='tag-line'>So make your first step</p>
 
          </div>
          <div className="Section1-search-boxes">
