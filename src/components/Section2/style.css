@@ -1,34 +1,62 @@
 .Section2{
-    margin-top: 100px;
     display: flex;
     margin-bottom: 100px;
+    flex-wrap: wrap;
+    width:80%;
+    margin-left:auto;
+    margin-right:auto;
+    justify-content:space-between;
 }
 
 .Section2Card{
-    border: solid black 3px;
+    cursor:pointer;
+    margin-top:50px;
     width: 250px;
-    height: 310px;
-    margin-left: 100px;
     position: relative;
 }
 
+.overlay{
+    
+    background-color: rgba(0,0,0,0.6);
+    position: absolute;
+    top: 0;
+    left:0;
+    right: 0;
+    bottom: 3px;
+    display: none;
+}
+
+.Section2Card:hover .overlay{
+    display: block;
+}
+
+.Section2Card:hover .Section2Card-city-name{
+    bottom: 36px;
+    transition: all 0.5s ease-in;
+}
+.Section2Card:hover .Section2Card-city-details{
+    opacity: 1;
+    bottom: 24px;
+    transition: all 0.5s ease-in;
+    
+}
+
 .Section2Card-image{
-   width: 250px;
-   height: 310px;
+   width: 100%;
+   object-fit: contain;
 }
 
 .Section2Card-city-name{
     position: absolute;
-    top: 210px;
-    left: 15px;
+    bottom: 12px;
     color: white;
     cursor: pointer;
 }
 
 .Section2Card-city-details{
     position: absolute;
-    top: 260px;
-    left: 15px;
+    bottom:12px;
+    opacity: 0;
     color: white;
     cursor: pointer;
 }  

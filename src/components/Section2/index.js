@@ -2,9 +2,10 @@ import React from "react";
 import "./style.css";
 import Section2Data from '../../Utils/Section2Data.js';
 
-function Section2AllData(dataSection2){
+function Section2AllData(dataSection2,index){
   return (
     <Section2Card 
+    key={index}
       image= {dataSection2.image}
       cityName= {dataSection2.cityName}
       cityDetails= {dataSection2.cityDetails}
@@ -15,7 +16,8 @@ function Section2AllData(dataSection2){
 function Section2Card(props){
     return(
       <div className="Section2Card">
-        <img className="Section2Card-image" src={props.image} alt="tour-image" />
+        <img className="Section2Card-image" src={props.image} alt="tour" />
+        <div className="overlay"></div>
         <h1 className="Section2Card-city-name">{props.cityName}</h1>
         <p className="Section2Card-city-details" >{props.cityDetails}</p>
       </div>
