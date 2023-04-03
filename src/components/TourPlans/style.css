@@ -11,7 +11,7 @@
 .Section2Card{
     cursor:pointer;
     margin-top:50px;
-    width: 250px;
+    width: 100%;
     position: relative;
 }
 
@@ -31,7 +31,7 @@
 }
 
 .Section2Card:hover .Section2Card-city-name{
-    bottom: 36px;
+    bottom: 56px;
     transition: all 0.5s ease-in;
 }
 .Section2Card:hover .Section2Card-city-details{
@@ -43,12 +43,14 @@
 
 .Section2Card-image{
    width: 100%;
-   object-fit: contain;
+   height: 420px;
+   object-fit: fill;
 }
 
 .Section2Card-city-name{
     position: absolute;
     bottom: 12px;
+    left:12px;
     color: white;
     cursor: pointer;
 }
@@ -56,6 +58,7 @@
 .Section2Card-city-details{
     position: absolute;
     bottom:12px;
+    left:12px;
     opacity: 0;
     color: white;
     cursor: pointer;

@@ -13,11 +13,11 @@ const Section1=()=>{
          <p className='tag-line'>So make your first step</p>
 
          </div>
-         <div className="Section1-search-boxes">
-          <input type="text" placeholder="Where to?" />
-          <input type="text" placeholder="When?" />
-          <input type="text" placeholder="Travel type" />
-          <button>Show Results</button>
+         <div className="Section1-search-boxes d-flex container flex-wrap">
+          <input className=' col-12 col-md-3' type="text" placeholder="Where to?" />
+          <input className=' col-12 col-md-3' type="text" placeholder="When?" />
+          <input className=' col-12 col-md-3' type="text" placeholder="Travel type" />
+          <button className=' col-12 col-md-3'>Show Results</button>
          </div>
        </div>
     </div>

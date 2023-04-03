@@ -1,12 +1,14 @@
 import React from "react";
-import Section1 from './components/Section1'
+import Section1 from './components/LandingImage'
 import Layout from "./components/Layout";
-import Section2 from "./components/Section2";
+import Section2 from "./components/TourPlans";
+import VideoSection from "./components/VideoSection";
 
 const App = ()=> {
   return (
     <Layout>
       <Section1/>
+      <VideoSection/>
       <Section2/>
     </Layout>
   );
