@@ -2,12 +2,19 @@ import React from 'react';
 import './style.css'
 
 
-export default ()=>{
+const VideoSection = ()=>{
   return(
-    <div className='video-section-wrapper bg-danger'>
-        Hi
+    <div className='container d-flex justify-content-between'>
+        <div className='col-5 bg-danger'>
+            Video
+        </div>
+        <div className='col-5 bg-success'>
+            Text
+        </div>
     </div>
   );
 }
+
+export default VideoSection
 
 

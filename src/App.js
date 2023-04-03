@@ -8,7 +8,7 @@ const App = ()=> {
   return (
     <Layout>
       <Section1/>
-      <VideoSection/>
+      {/* <VideoSection/> */}
       <Section2/>
     </Layout>
   );

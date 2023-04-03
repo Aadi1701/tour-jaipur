@@ -1,10 +1,10 @@
 import React from "react";
-import "./styles.css";
+import "./style.css";
 
 const Footer=()=>{
     return (
-        <footer className="footer">
-            <h1>Tours and Travels</h1>
+        <footer className="footer mt-4 d-flex">
+            <p className="text-center w-100">All Rights Reserved &#169;</p>
         </footer>
     );
 }
