@@ -14,9 +14,10 @@ const Section1=()=>{
 
          </div>
          <div className="Section1-search-boxes d-flex container flex-wrap">
+         <input className=' col-12 col-md-3' type="text" value={'Modinagar'} placeholder="From Where?" />
           <input className=' col-12 col-md-3' type="text" placeholder="Where to?" />
           <input className=' col-12 col-md-3' type="text" placeholder="When?" />
-          <input className=' col-12 col-md-3' type="text" placeholder="Travel type" />
+          {/* <input className=' col-12 col-md-3' type="text" placeholder="Travel type" /> */}
           <button className=' col-12 col-md-3'>Show Results</button>
          </div>
        </div>
