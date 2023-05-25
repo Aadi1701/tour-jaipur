@@ -1,19 +1,19 @@
 import React from "react";
-import Section1 from './components/LandingImage'
+import Section1 from "./components/LandingImage";
 import Layout from "./components/Layout";
 import Section2 from "./components/TourPlans";
 import "swiper/css";
-import "swiper/css/pagination";
+import "swiper/css/bundle";
 import VideoSection from "./components/VideoSection";
 
-const App = ()=> {
+const App = () => {
   return (
-    <Layout>
-      <Section1/>
+    <>
+      <Section1 />
       {/* <VideoSection/> */}
-      <Section2/>
-    </Layout>
+      <Section2 />
+    </>
   );
-}
+};
 
 export default App;

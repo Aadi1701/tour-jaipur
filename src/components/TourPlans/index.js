@@ -2,7 +2,8 @@ import React from "react";
 import "./style.css";
 import Section2Data from "../../Utils/Section2Data.js";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation,Pagination } from "swiper";
+import { Autoplay, Navigation, Pagination } from "swiper";
+import { Link } from "react-router-dom";
 
 function Section2AllData(dataSection2, index) {
   return (
@@ -10,7 +11,7 @@ function Section2AllData(dataSection2, index) {
       <Section2Card
         image={dataSection2.image}
         cityName={dataSection2.cityName}
-        cityDetails = {dataSection2.cityDetails}
+        cityDetails={dataSection2.cityDetails}
       />
       {/* <Section2Card
         image={dataSection2.image}
@@ -21,7 +22,7 @@ function Section2AllData(dataSection2, index) {
     // <div className="col-12 col-md-6 col-lg-4" key={index}>
     //   <div className="px-2">
     //     <Section2Card
-          
+
     //       image={dataSection2.image}
     //       cityName={dataSection2.cityName}
     //       cityDetails={dataSection2.cityDetails}
@@ -44,32 +45,27 @@ function Section2Card(props) {
 
 const Section2 = () => {
   return (
-    <div className="container">
-      <Swiper
-        slidesPerView={3}
-        spaceBetween={30}
-        
-        pagination={{
-          clickable: true,
-        }}
-        autoplay={
-          {
-            duration:5500,
-            disableOnInteraction: false,
-          }
-        }
-        navigation={true}
-        centeredSlides={true}
-        modules={[Navigation,Autoplay]}
-        className="mySwiper"
-      >
-        {
-          Section2Data.map(Section2AllData)
-        }
-        
-      </Swiper>
-      {/* {Section2Data.slice(0,3).map(Section2AllData)}  */}
-    </div>
+    <Swiper
+      slidesPerView={3}
+      spaceBetween={50}
+      navigation={false}
+      pagination={{ clickable: true }}
+      autoplay={{ disableOnInteraction: true, duration: 55000 }}
+      modules={[Navigation, Pagination, Autoplay]}
+      className="mySwiper container "
+    >
+      {Section2Data.map((item, index) => (
+        <SwiperSlide>
+          <Link to='/tour' state={{to:item.cityName}}>
+            <Section2Card
+              image={item.image}
+              cityName={item.cityName}
+              cityDetails={item.cityDetails}
+            />
+          </Link>
+        </SwiperSlide>
+      ))}
+    </Swiper>
   );
 };
 
