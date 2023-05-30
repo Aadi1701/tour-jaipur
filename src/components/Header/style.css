@@ -1,24 +1,55 @@
 
+.app-header{
+  padding-top: 6px;
+  padding-bottom:6px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+.ham{
+  display: none;
+}
 .nav-bar{
-  background-color: grey;
-  height: 40px;
-  font-size: 20px;
+  width:80%;
   display: flex;
+  margin-left:auto;
+  margin-right:auto;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo{
+  width:48px;
+  height:48px;
+
+}
+.nav-bar-item-group{
+  list-style: none;
+  display: flex;
+  width: 60%;
+  justify-content: space-between;
+}
+.nav-bar-item{
   cursor: pointer;
-}
-
-.NavBarCard{
-  display: flex;
-  margin: 0 35px 0 20px;
-}
-
-.NavBarCard-image{
-  width: 27px;
-  height: 27px;
-}
-
-.NavBarCard-name{
-  font-style: italic;
-  font-size: 18px;
+  font-weight: 500;
   color: black;
+}
+.active{
+  color:royalblue;
+  cursor: pointer;
+  font-weight: 500;
+
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width:992px){
+  .ham{
+    display: block;
+    cursor: pointer;
+  }
+  .nav-bar-item-group{
+    display: none;
+  }
 }

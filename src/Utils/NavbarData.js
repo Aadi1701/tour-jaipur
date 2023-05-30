@@ -46,4 +46,15 @@ const NavbarData = [
   },
 ];
 
+// const NavbarData=[
+//   {name:"Home"},
+//   {name:"Pages"},
+//   {name:"Destinations"},
+//   {name:"Tours"},
+//   {name:"Blogs"},
+//   {name:"Shop"},
+//   {name:"Elements"},
+
+// ]
+
 export default NavbarData;

@@ -1,14 +1,19 @@
 import React from "react";
-import Section1 from './components/Section1'
-import Header from "./components/Header";
+import Section1 from "./components/LandingImage";
+import Layout from "./components/Layout";
+import Section2 from "./components/TourPlans";
+import "swiper/css";
+import "swiper/css/bundle";
+import VideoSection from "./components/VideoSection";
 
-const App = ()=> {
+const App = () => {
   return (
-    <div>
-      <Header/>
+    <>
       <Section1 />
-    </div>
+      {/* <VideoSection/> */}
+      <Section2 />
+    </>
   );
-}
+};
 
 export default App;
