@@ -61,7 +61,7 @@ const Section1 = () => {
             })}
           </select>
           <input className=" col-12 col-md-3" type="date" placeholder="When?" onChange={(e)=>handleFilter("to",e.target.value)}/>
-          <Link to='/tour' state={filters} className=" col-12 col-md-3">
+          <Link to={filters.to==undefined?'/':'/tour'} state={filters} className=" col-12 col-md-3">
             <button className="w-100 h-100">Show Results</button>
           </Link>
           
